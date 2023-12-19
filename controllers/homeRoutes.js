@@ -2,7 +2,7 @@
 const router = require('express').Router();
 const { User } = require('../models');
 const withAuth = require('../utils/auth');
-const {getCategory}= require('./api/newsapi');
+const {getNews}= require('./api/newsapi');
 /** HOME **/
 
 /**  CAT */
@@ -36,17 +36,19 @@ router.get('/', withAuth, async (req, res) => {
 });
 
 /**  NEWS */
-router.get('/news', withAuth, async (req, res) => {
+router.get('/news/:userCategory', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
     });
 
-    const user = userData.get({ plain: true });
+    const newsData = await getNews(req.params.userCategory)
+
 
     res.render('news', {
-      logged_in: true
+      logged_in: true,
+      newsData: newsData,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -60,7 +62,7 @@ router.get('/login',async (req, res) => {
     res.redirect('/categories');
     return;
   }
-  const categories= await getCategory();
+  const categories= await getNews();
 console.log(categories)
   res.render('login');
 });

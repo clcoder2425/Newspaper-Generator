@@ -1,27 +1,28 @@
 require('dotenv').config();
-const NewsApi= require('newsapi');
+const NewsApi = require('newsapi');
 const newsapi = new NewsApi(process.env.API_KEY);
 
-const getCategory = async () => {
-    
-      // Fetch data from the News API (replace 'your_api_key' and 'your_api_endpoint' with the actual API key and endpoint)
-      const response = await newsapi.v2.sources({
+const getNews = async (userCategory) => {
+
+    const response = await newsapi.v2.topHeadlines({
         language: 'en',
-      });
+        category: userCategory,
+    });
 
-      // Extract relevant data from the API response
-      const categoryData = response.sources.map((source) => {
-       return{
-        categoryName: source.category,
-       }
-      
-        
-        // Add other relevant fields
-        
-      });
+    const newsData = response.articles.map((article) => {
+        return {
+            source: article.source.name,
+            author: article.author,
+            title: article.title,
+            image: article.urlToImage,
+            date: article.publishedAt,
+            content: article.content,
+        }
 
-console.log(categoryData);
-      // Insert the data into the 'News' table
-   
-    };
-    module.exports= {getCategory};
+    });
+
+    console.log(newsData);
+
+return newsData;
+};
+module.exports = { getNews };
