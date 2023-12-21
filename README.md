@@ -20,7 +20,7 @@
 
 ### Images
 ![Login](public/assets/newsPic1.PNG)
-![Homepage](public/assets/NewsPic2.PNG) 
+![Homepage](public/assets/newsPic2.PNG) 
 ![News](public/assets/newsPic3.PNG)
 
 
