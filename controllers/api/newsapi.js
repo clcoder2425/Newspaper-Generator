@@ -8,8 +8,24 @@ const getNews = async (userCategory) => {
         language: 'en',
         category: userCategory,
     });
+    const newsData = response.articles.filter((article) => {
+        //test if title and content are null
+        if (article.title == null || article.content == null) {
+            return false
+        }
+        if (article.source.name && article.source.name.includes("Removed")
+            || article.author && article.author.includes("Removed")
+            || article.title && article.title.includes("Removed")
+            || article.urlToImage && article.urlToImage.includes("Removed")
+            || article.publishedAt && article.publishedAt.includes("Removed")
+            || article.content && article.content.includes("Removed")
+        ) {
+            return false
+        }
 
-    const newsData = response.articles.map((article) => {
+        return true//test if any field contain removed
+    }).map((article) => {
+
         return {
             source: article.source.name,
             author: article.author,
@@ -20,9 +36,12 @@ const getNews = async (userCategory) => {
         }
 
     });
+    console.log(newsData)
+    return newsData;
 
-    console.log(newsData);
 
-return newsData;
+
 };
+
+
 module.exports = { getNews };
