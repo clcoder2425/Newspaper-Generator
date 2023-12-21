@@ -26,7 +26,7 @@ router.get('/', withAuth, async (req, res) => {
         { categoryName: 'sports' },
         { categoryName: 'health' },
         { categoryName: 'science' },
-        {categoryName: 'crypto'},
+      
       ]
     });
 

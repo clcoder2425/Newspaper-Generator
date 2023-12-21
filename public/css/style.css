@@ -22,3 +22,40 @@ header, .project:not(:last-child) {
   font-weight: bold;
   margin-left: -5px;
 }
+
+#categorieList{
+ 
+  margin: 10rem;
+  padding: 0;
+  list-style: none;
+ 
+
+
+
+}
+li{
+
+  margin-top: 20px;
+}
+
+
+
+#categoriesListCss{
+
+  margin: 5rem;
+  padding: 0;
+  list-style: none;
+  text-transform: uppercase;
+font-weight: bolder;
+  
+
+}
+
+
+
+#newsTitle{
+display: block;
+
+
+}
+

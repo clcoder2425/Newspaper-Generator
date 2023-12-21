@@ -1,1 +1,17 @@
-NEWS
+
+<header>{{this.categoryName}} </header>
+
+<div id="card-header "> 
+  {{#each newsData}}
+ <h1> {{this.source}}</h1>  
+ <p>{{this.title}}</p>
+
+ <a href="{{this.image}}"></a>
+   
+    <p> {{this.content}}</p>
+    <p> By: {{this.author}}   </p>
+    
+    
+
+  {{/each}}
+</div>
