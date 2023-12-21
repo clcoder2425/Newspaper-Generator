@@ -1,10 +1,12 @@
+//Importing Sequelize
 const Sequelize = require('sequelize');
+//Importing enviroment variables
 require('dotenv').config();
 
 let sequelize;
 
 if (process.env.POSTGRES_STRING) {
-    const sequelize = new Sequelize(process.env.POSTGRES_STRING);
+    sequelize = new Sequelize(process.env.POSTGRES_STRING);
 } else {
     sequelize = new Sequelize(
         process.env.DB_NAME,
@@ -18,4 +20,5 @@ if (process.env.POSTGRES_STRING) {
     );
 }
 
+//Exporting sequelize
 module.exports = sequelize;
