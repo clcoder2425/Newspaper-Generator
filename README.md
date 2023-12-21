@@ -42,7 +42,7 @@ The NewsPaper-Generator app is an online newspaper that provides users with news
 ## Installation
 Install Node.js. Clone the repo, run npm i for the dependencies.  Create an account on https://newsapi.org to get API key for Top Headlines. Create an .env file and add your database name, MySQL username, MySQL password, and API_KEYT as follows:
 
-DB_NAME='newsgenerator_db' DB_USER='your_mysql_user' DB_PASSWORD='your_mysql_pw' API_KEYT='Df6872036999999239c9a55361036e76a'
+DB_NAME='newsgenerator_db' DB_USER='your_mysql_user' DB_PASSWORD='your_mysql_pw' API_KEYT='your_api_key'
 
 Create a .gitignore file and add the following files:
 
