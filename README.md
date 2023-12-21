@@ -18,23 +18,25 @@
 
 ## Webpage Preview
 
+### Images
+![Login](public/assets/newsPic1.PNG)
+![Homepage](public/assets/NewsPic2.PNG) 
+![News](public/assets/newsPic3.PNG)
+
+
 ![Webpage-demo](./assets/)
 
 ## Code-Snippet
-Java script
-#Funtion to Handle Form
 
-```
-```
-#Function to handle search
+### Funtion to Handle Form
+![Login Code-Snippet 1](public/assets/newsPic4.PNG)
+![Login Code-Snippet 2](public/assets/newsPic5.PNG)
 
-```
-```
-#Function to display photos
+### Function to  filter News Data
+![Alt text](public/assets/newsPic6.PNG)
 
-```
-```
-
+### Handlebars to display HTML
+![Handlebar-Snippet](public/assets/newsPic7.PNG)
 
 ## Custome-Features
 - 
