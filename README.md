@@ -91,8 +91,8 @@ https://newspaper-generator-app.onrender.com
 - [CarrTe-Alexander-(CJ)](#CarrTe Alexander (CJ) https://github.com/carrtealexander)
 - [Carmen-Jimenez](#Carmen Jimenez https://github.com/clcoder2425/)
 ## Instructor Team
-- [Justin Gottschalk](#CarrTe Alexander (CJ) https://github.com/carrtealexander)
-- [Mitchell](#CarrTe Alexander (CJ) https://github.com/carrtealexander)
+- [Justin-Gottschalk](#Justin Gottschalk) 
+- [Mitchell-Lemieux](#Mitchell Lemieux) 
 
 
 ## Credits
